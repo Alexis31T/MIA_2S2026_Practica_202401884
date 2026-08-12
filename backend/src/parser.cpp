@@ -12,12 +12,13 @@ ResultadoSintactico Parser::analizar(const std::vector<Token>& tokens) {
     // Extraer parametros
     for (size_t i = 1; i < tokens.size(); i++) {
         if (tokens[i].tipo == "PARAMETRO") {
+            std::string paramName = tokens[i].valor;
             std::string valor = "";
             if (i + 1 < tokens.size() && tokens[i + 1].tipo == "VALOR") {
                 valor = tokens[i + 1].valor;
                 i++;
             }
-            parametros[tokens[i].valor] = valor;
+            parametros[paramName] = valor;
         }
     }
 

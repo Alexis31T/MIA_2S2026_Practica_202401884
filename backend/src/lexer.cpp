@@ -37,12 +37,11 @@ ResultadoLexico Lexer::analizar(const std::string& entrada) {
         else {
             // Procesar parametros
             if (palabra[0] == '-') {
-                std::string param = palabra;
-                std::transform(param.begin(), param.end(), param.begin(), ::tolower);
-
-                size_t posIgual = param.find('=');
+                size_t posIgual = palabra.find('=');
                 std::string nombreParam = posIgual != std::string::npos ?
-                    param.substr(0, posIgual) : param;
+                    palabra.substr(0, posIgual) : palabra;
+
+                std::transform(nombreParam.begin(), nombreParam.end(), nombreParam.begin(), ::tolower);
 
                 if (std::find(parametrosValidos.begin(), parametrosValidos.end(), nombreParam) == parametrosValidos.end()) {
                     resultado.exito = false;
@@ -53,7 +52,7 @@ ResultadoLexico Lexer::analizar(const std::string& entrada) {
                 resultado.tokens.push_back({"PARAMETRO", nombreParam});
 
                 if (posIgual != std::string::npos) {
-                    std::string valor = param.substr(posIgual + 1);
+                    std::string valor = palabra.substr(posIgual + 1);
                     resultado.tokens.push_back({"VALOR", valor});
                 }
             }
