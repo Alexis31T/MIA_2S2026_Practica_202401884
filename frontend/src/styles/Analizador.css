@@ -2,6 +2,141 @@
   width: 100%;
 }
 
+.modo-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.modo {
+  background: #0f1e3d;
+  border: 2px solid #00d9ff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.modo h4 {
+  color: #00d9ff;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.entrada-archivo {
+  width: 100%;
+  padding: 10px;
+  background: #050a1a;
+  border: 1px solid #00d9ff;
+  border-radius: 5px;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.resultados-multiples {
+  background: #0f1e3d;
+  border: 2px solid #00d9ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.resultados-multiples h3 {
+  color: #00d9ff;
+  margin-bottom: 15px;
+}
+
+.tabla-resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fila-resultado {
+  display: grid;
+  grid-template-columns: 40px 1fr 120px;
+  gap: 15px;
+  padding: 12px;
+  background: #050a1a;
+  border-left: 3px solid;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.fila-resultado.exitoso {
+  border-color: #00ff99;
+}
+
+.fila-resultado.error {
+  border-color: #ff4444;
+}
+
+.numero-cmd {
+  color: #00d9ff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cmd-texto {
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.estado {
+  text-align: right;
+}
+
+.valido-badge {
+  background: rgba(0, 255, 153, 0.2);
+  color: #00ff99;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.error-badge {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff6666;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.errores-inline {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.error-msg {
+  color: #ff6666;
+  font-size: 0.85em;
+  padding-left: 10px;
+  border-left: 2px solid #ff4444;
+}
+
+@media (max-width: 768px) {
+  .modo-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .fila-resultado {
+    grid-template-columns: 35px 1fr;
+  }
+
+  .estado {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}
+
 form {
   background: #0f1e3d;
   border: 2px solid #00d9ff;
