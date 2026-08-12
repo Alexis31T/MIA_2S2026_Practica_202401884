@@ -1,0 +1,132 @@
+.analizador {
+  width: 100%;
+}
+
+form {
+  background: #0f1e3d;
+  border: 2px solid #00d9ff;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.entrada {
+  width: 100%;
+  padding: 12px 15px;
+  background: #050a1a;
+  border: 1px solid #00d9ff;
+  border-radius: 5px;
+  color: #00d9ff;
+  font-size: 1em;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 15px;
+}
+
+.entrada:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button[type="submit"] {
+  background: #00d9ff;
+  color: #0a0e27;
+}
+
+button[type="submit"]:hover {
+  background: #00ff99;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 217, 255, 0.3);
+}
+
+button.secundario {
+  background: #222;
+  color: #ddd;
+  border: 1px solid #444;
+}
+
+button.secundario:hover {
+  background: #333;
+  border-color: #00d9ff;
+}
+
+.resultado {
+  background: #0f1e3d;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.resultado.exitoso {
+  border: 2px solid #00ff99;
+}
+
+.resultado.error {
+  border: 2px solid #ff4444;
+}
+
+.resultado h3 {
+  color: #00d9ff;
+  margin: 15px 0 10px 0;
+  font-size: 1.1em;
+}
+
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.token {
+  background: #050a1a;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #00d9ff;
+  color: #00ff99;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.valido {
+  color: #00ff99;
+  font-weight: 600;
+  padding: 10px;
+  background: rgba(0, 255, 153, 0.1);
+  border-radius: 4px;
+  border-left: 3px solid #00ff99;
+}
+
+.errores {
+  list-style: none;
+  margin: 10px 0 0 0;
+}
+
+.errores li {
+  color: #ff6666;
+  padding: 8px;
+  background: rgba(255, 68, 68, 0.1);
+  border-radius: 4px;
+  margin: 5px 0;
+  border-left: 3px solid #ff4444;
+}
+
+.mensaje-error {
+  color: #ff6666;
+  font-weight: 600;
+}

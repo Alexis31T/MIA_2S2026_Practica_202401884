@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27, #1a1a3e);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 900px;
+}
+
+h1 {
+  text-align: center;
+  color: #00d9ff;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #888;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
